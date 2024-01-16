@@ -1,0 +1,31 @@
+{% extends "padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Store Fenoglio
+
+{% endblock %}
+
+{% block description %}
+
+
+<form action = "/buscar/" method "GET">
+    <input type= "number" name = "camada" id= "camada">
+    <input type= "submit" value = "buscar">
+
+
+</form>
+
+<p> Estamos buscando la camada: {{camada}} </p>
+
+{%for curso in curso%}
+
+<p> Nombre : {{curso.nombre}} ---- camada: {{curso.camada}} </p>
+
+{% endfor %}
+
+{% endblock %}
